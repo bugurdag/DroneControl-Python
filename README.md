@@ -1,1 +1,4 @@
 # DroneControl-Python
+This project is aimed at encrypting a message that includes coded commands, sending it through a drone through a client-server model, and having the drone decrypt the message and executing the command. 
+##des.py
+Christof Paar's *Understanding Cryptography* was used for the exact algorithm and relevant constants for the Python implementation of Data Encryption Standard. The "DES" function, which is used both for encryption and decryption, has to receive a "bytes" type input of key and plain text/cipher. Ideally, the key and the plain text/cipher should be 64 bits long, but the program adds 0's to the end if its shorter than that. The input to DES should not be longer than 64 bits, in which case function "serialDES" should be used. The function "stringToByte" can be used to convert string messages of any length to bytes. To use the Python code in another file, download the code, put it in the same folder the other file is in, and import des.
