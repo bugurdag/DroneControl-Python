@@ -69,7 +69,7 @@ def serialDES(plainInput, keyInput, decrypt=False):
 
 def DES(plainInput, keyInput, decrypt=False):
     plain=np.array(list(plainInput.decode('utf-8')+"0"*(64-len(plainInput))))
-    key=np.array(list(keyInput.decode('utf-8')))
+    key=np.array(list(keyInput.decode('utf-8')+"0"*(64-len(plainInput))))
     ###########################################################################
     plain=permute(plain,IP).astype(int)
     plain=np.array_split(plain,2)
